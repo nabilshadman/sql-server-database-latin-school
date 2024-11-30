@@ -1,4 +1,4 @@
-# 1. SQL Server Database for Latin School  
+# SQL Server Database for Latin School  
 
 The **Latin School of San Diego** is a fictional language school that offers courses in Latin language and culture. It is a small school that has been in operation for about 8 years. They offer new classes on a quarterly basis. Up to now they have been using Excel workbooks to track course offerings, student enrollments and instructor payments. The process has become increasingly unwieldly and the school wants to upgrade to a database backend.  
 
@@ -8,7 +8,7 @@ We create a new **SQL Server** [database](https://github.com/nabilshadman/sql-se
 
 Please refer to [this](https://github.com/nabilshadman/sql-server-database-latin-school/blob/main/requirements/project_requirements.pdf) document for the **requirements** of the project.  
 
-# 2. Database Structure  
+# Database Structure  
 In this section, we discuss the **business logic** behind the database, where we identify the primary entities and the relationships between them.  
 
 There are **4 primary entities** to be managed: Courses, Sections, Persons and Faculty. Course records describe the content of what will be taught in a course as well as the expected cost and duration. Section records are a subset of a Course record. They contain information on when and where a course will be taught as well as who will be teaching it. Person records contain information students enrolled in courses but also people who are members of the Latin School. Not all members enroll in courses. Faculty records contain information about the instructors who teach classes for the school.  
@@ -32,7 +32,7 @@ We provide an **Entity Relationship Diagram (ERD)** of the database in Figure 1.
 **Figure 1:** ERD of the database for latin school.  
 
 
-# 3. Additional Database Objects  
+# Additional Database Objects  
 After we create the tables and import the data from the Excel workbooks, we create a few **views** and **stored procedures** for reporting purposes:  
 
 (1) We create a view that shows the number of times each Course has been offered in the history of the school.    
@@ -41,7 +41,7 @@ After we create the tables and import the data from the Excel workbooks, we crea
 (4) We create a procedure that adds a new person to the database.  
 
 
-# 4. Project Deliverables  
+# Project Deliverables  
 At the completion of the project, we provide the following **documents** to the management:  
 
 - Screenshots of the output from [view 1](https://github.com/nabilshadman/sql-server-database-latin-school/blob/main/sql_server_database/view_1.jpg), [view 2](https://github.com/nabilshadman/sql-server-database-latin-school/blob/main/sql_server_database/view_2.jpg), [procedure 3](https://github.com/nabilshadman/sql-server-database-latin-school/blob/main/sql_server_database/procedure_1.jpg), and [procedure 4](https://github.com/nabilshadman/sql-server-database-latin-school/blob/main/sql_server_database/procedure_2.jpg).  
