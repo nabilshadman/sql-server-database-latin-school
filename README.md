@@ -121,4 +121,8 @@ SELECT TOP 1 * FROM Address ORDER BY AddressID DESC
 
 ## Contributing
 
-We welcome contributions to improve the database schema or add new features. Please submit pull requests or open issues for any enhancements.  
+We welcome contributions to improve the database schema or add new features. Please submit pull requests or open issues for any enhancements. 
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE.txt) file for details.  
