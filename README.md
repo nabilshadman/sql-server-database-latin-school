@@ -80,6 +80,53 @@ After creating the tables and importing the data from the Excel workbooks, we im
 - A **procedure** that displays the course history for a selected person
 - A **procedure** that adds a new person to the database
 
+
+## Environment Setup
+
+### Prerequisites
+1. **SQL Server**
+   - Download and install [SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019) or later
+   - Choose either Developer or Express edition for development purposes
+
+2. **SQL Server Management Studio (SSMS)**
+   - Download [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+   - Version 18.0 or later recommended for full compatibility
+
+3. **Microsoft Excel**
+   - Required for viewing source data files
+   - Excel 2016 or later recommended
+
+### Database Configuration
+1. Create a new database in SSMS:
+```sql
+CREATE DATABASE LatinSchool;
+GO
+USE LatinSchool;
+```
+
+2. Execute the provided [database script](sql_server_database/sql_server_database_script.sql)
+
+3. Verify installation by running:
+```sql
+SELECT name FROM sys.databases WHERE name = 'LatinSchool';
+```
+
+### Data Migration
+1. Open the Excel workbooks from the [latin_school_data](latin_school_data) directory
+2. Follow the import wizard in SSMS:
+   - Right-click on the database
+   - Select Tasks → Import Data
+   - Choose Microsoft Excel as the data source
+   - Map columns to appropriate database tables
+
+### Security Setup (Optional)
+```sql
+CREATE LOGIN LatinSchoolUser WITH PASSWORD = 'your_secure_password';
+CREATE USER LatinSchoolUser FOR LOGIN LatinSchoolUser;
+GRANT SELECT, INSERT, UPDATE ON SCHEMA::dbo TO LatinSchoolUser;
+```
+
+
 ## Project Deliverables
 
 We provide the following **documents** to the management:
@@ -118,6 +165,7 @@ SELECT TOP 1 * FROM Address ORDER BY AddressID DESC
 3. Import historical data using provided migration scripts
 4. Verify data integrity using built-in views
 5. Test stored procedures with sample data
+
 
 ## Contributing
 
